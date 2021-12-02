@@ -10,14 +10,15 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText searchbar = (EditText) findViewById(R.id.searchbar);
-    Button btnSearch = (Button) findViewById(R.id.btnSearch);
-    Button btnHome = (Button) findViewById(R.id.btnSearchHome);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainpage);
+
+        EditText searchbar = (EditText) findViewById(R.id.searchbar);
+        Button btnSearch = (Button) findViewById(R.id.btnSearch);
+        Button btnHome = (Button) findViewById(R.id.btnSearchHome);
 
         //카테고리보기 눌렀을때
         btnHome.setOnClickListener(new View.OnClickListener() {
