@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/d2dbmainback"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="420dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/searchbar"
+                    android:layout_width="223dp"
+                    android:layout_height="63dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#e4e4e4"
+                    android:textSize="25dp"/>
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_small2"
+                    android:fontFamily="@font/kodia"
+                    android:text="검색"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnSearchHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_small"
+                android:fontFamily="@font/kodia"
+                android:text="카테고리 보기"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
