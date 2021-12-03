@@ -33,22 +33,24 @@
             android:background="#0affffff">
             <EditText
                 android:id="@+id/searchbar"
-                android:layout_width="223dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="240dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="36dp"
                 android:layout_marginRight="5dp"
                 android:background="#e4e4e4"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:layout_marginTop="1dp" />
+
             <Button
                 android:id="@+id/btnSearch"
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/button_small2"
                 android:fontFamily="@font/kodia"
                 android:text="검색"
-                android:textColor="#ebf4bf"
-                android:textSize="25dp" />
+                android:textColor="#ffffff"
+                android:textSize="23dp" />
         </LinearLayout>
 
         <!--아이탬 속성-->
@@ -101,6 +103,12 @@
                     android:layout_height="57dp"
                     android:background="@drawable/thsdown"
                     android:layout_marginLeft="15dp"/>
+                <Button
+                    android:id="@+id/btn_bookmark"
+                    android:layout_width="55dp"
+                    android:layout_height="57dp"
+                    android:background="@drawable/like"
+                    android:layout_marginLeft="15dp"/>
             </LinearLayout>
             <TextView
                 android:id="@+id/text_item_assess"
@@ -120,7 +128,31 @@
                 android:gravity="center"
                 android:textSize="17dp">
             </TextView>
+
+            <Button
+                android:id="@+id/btnSearchHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_small"
+                android:fontFamily="@font/kodia"
+                android:text="카테고리 보기"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:layout_marginTop="2dp"/>
+
+            <Button
+                android:id="@+id/btn_bookmark_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_small"
+                android:fontFamily="@font/kodia"
+                android:text="즐겨찾기"
+                android:textColor="#ffffff"
+                android:textSize="25dp" />
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookmarkPage"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="horizontal"
+        android:background="#a0111111">
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dager1"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/item_stat"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:text="아이탬 능력치"
+            android:textColor="#ffffff"
+            android:textSize="17dp"/>
+        <TextView
+            android:id="@+id/item_option"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="추가옵션"
+            android:textColor="#6969ff"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backmain">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_gravity="bottom">
+         <Button
+             android:id="@+id/btnSearchHome"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:background="@drawable/button_small"
+             android:fontFamily="@font/kodia"
+             android:text="카테고리 보기"
+             android:textColor="#ffffff"
+             android:textSize="25dp"
+             android:layout_marginTop="2dp"/>
+
+         <Button
+             android:id="@+id/btn_bookmark_list"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:background="@drawable/button_small"
+             android:fontFamily="@font/kodia"
+             android:text="즐겨찾기"
+             android:textColor="#ffffff"
+             android:textSize="25dp" />
+
+     </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
