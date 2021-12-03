@@ -38,23 +38,23 @@ public class MainPage_Act extends AppCompatActivity {
                 }
             });
 
-            //검색버튼 눌렀을때
-            btnSearch.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                }
-            });
-
-
             //카테고리보기 눌렀을때
             btnHome.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), ItemPage.class);
+                    Intent intent = new Intent(getApplicationContext(), com.example.d2db.MainActivity.class);
                     startActivity(intent);
                 }
             });
+            //카테고리보기 눌렀을때
+            btnSearch.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), com.example.d2db.ItemPage.class);
+                    startActivity(intent);
+                }
+            });
+
 
 
         }

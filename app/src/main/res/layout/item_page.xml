@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backline">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backmain"
+        android:orientation="vertical"
+        android:layout_margin="3dp">
+
+        <!-- db탬이름 불러오기 -->
+        <TextView
+            android:id="@+id/text_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="db 탬이름(자바)"
+            android:textSize="30dp"
+            android:textColor="#bba258"
+            android:gravity="center"
+            android:background="#0affffff">
+        </TextView>
+
+        <!-- 검색버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:background="#0affffff">
+            <EditText
+                android:id="@+id/searchbar"
+                android:layout_width="223dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:background="#e4e4e4"
+                android:textSize="25dp" />
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_small2"
+                android:fontFamily="@font/kodia"
+                android:text="검색"
+                android:textColor="#ebf4bf"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <!--아이탬 속성-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="horizontal"
+            android:background="#a0111111">
+            <ImageView
+                android:id="@+id/item_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dager1"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/item_stat"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:text="아이탬 능력치"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+            <TextView
+                android:id="@+id/item_option"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="추가옵션"
+                android:textColor="#6969ff"
+                android:textSize="17dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_thumsup"
+                    android:layout_width="55dp"
+                    android:layout_height="57dp"
+                    android:background="@drawable/thsup"/>
+                <Button
+                    android:id="@+id/btn_thumsdown"
+                    android:layout_width="55dp"
+                    android:layout_height="57dp"
+                    android:background="@drawable/thsdown"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/text_item_assess"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="아이탬 평가 : 대체로 후짐"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="17dp">
+            </TextView>
+            <TextView
+                android:id="@+id/text_item_assess_per"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="%의 사용자가 이 아이탬을 좋아합니다"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="17dp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
