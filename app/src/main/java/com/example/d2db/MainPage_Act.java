@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,14 +28,22 @@ public class MainPage_Act extends AppCompatActivity {
             mPlayer = MediaPlayer.create(this,R.raw.dia2);
             Switch bgm = (Switch) findViewById(R.id.bgm);
 
+
+
             //백그라운드 음악재생
             bgm.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (bgm.isChecked()==true)
+                    mPlayer.setVolume(45,45);
+                    mPlayer.setLooping(true);
+                    if (bgm.isChecked()==true){
                         mPlayer.start();
-                    else
-                        mPlayer.stop();
+                        Toast.makeText(getApplicationContext(),"BGM 작동",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        mPlayer.pause();
+                        Toast.makeText(getApplicationContext(),"BGM 정지",Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
 
