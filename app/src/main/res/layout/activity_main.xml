@@ -2,18 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backmain"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="3dp"
-        android:background="@drawable/backmain">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -29,10 +30,76 @@
                 android:layout_height="30dp"
                 />
 
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        android:layout_gravity="center"
+        android:outlineAmbientShadowColor="@color/white"
+        app:queryHint="찾으시는 아이템을 검색하세요"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="4">
+                <ImageView
+                    android:id="@+id/mainitem_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dager1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/mainitem_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kodia"
+                    android:paddingHorizontal="5dp"
+                    android:text="존나개쩌는 단검"
+                    android:textColor="#c7b377"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/mainitem_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kodia"
+                    android:paddingHorizontal="10dp"
+                    android:text="대거"
+                    android:textColor="#cc00cc"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/mainitem_option"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kodia"
+                    android:paddingHorizontal="5dp"
+                    android:text="찌르면 다죽인다."
+                    android:textColor="#6969ff"
+                    android:textSize="18dp" />
+            </GridLayout>
+
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
+
 
 
 </LinearLayout>
