@@ -75,7 +75,7 @@ public class MainPage_Act extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            //카테고리보기 눌렀을때
+            //검색 눌렀을때
             btnSearch.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -96,29 +96,29 @@ public class MainPage_Act extends AppCompatActivity {
 
         }
 
-//배경 비디오(videov) 나가거나 다른창에서 돌아왔을 때 다시시작
-    @Override
-    protected void onPostResume() {
-        videov.resume();
-        super.onPostResume();
-    }
+            //배경 비디오(videov) 나가거나 다른창에서 돌아왔을 때 다시시작
+                @Override
+                protected void onPostResume() {
+                    videov.resume();
+                    super.onPostResume();
+                }
 
-    @Override
-    protected void onRestart() {
-        videov.start();
-        super.onRestart();
-    }
+                @Override
+                protected void onRestart() {
+                    videov.start();
+                    super.onRestart();
+                }
 
-    @Override
-    protected void onPause() {
-        videov.suspend();
-        super.onPause();
-    }
+                @Override
+                protected void onPause() {
+                    videov.suspend();
+                    super.onPause();
+                }
 
-    @Override
-    protected void onDestroy() {
-        videov.stopPlayback();
-        super.onDestroy();
-    }
+                @Override
+                protected void onDestroy() {
+                    videov.stopPlayback();
+                    super.onDestroy();
+                }
 
 }
