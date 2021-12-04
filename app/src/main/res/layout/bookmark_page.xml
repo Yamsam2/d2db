@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BookmarkPage"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/backline">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/backmain"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="3dp">
 
         <ListView
             android:id="@+id/item_listview"

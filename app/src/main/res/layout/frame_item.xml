@@ -25,9 +25,9 @@
             <TextView
                 android:id="@+id/text_item_name"
                 android:layout_width="110dp"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:text="db탬이름"
-                android:textSize="15dp"
+                android:textSize="14dp"
                 android:textColor="#bba258"
                 android:gravity="center" />
         </LinearLayout>
@@ -37,20 +37,26 @@
             android:layout_height="170dp"
             android:text="아이탬 능력치"
             android:textColor="#ffffff"
-            android:textSize="17dp"/>
+            android:textSize="14dp"
+            android:gravity="center"/>
         <TextView
             android:id="@+id/item_option"
             android:layout_width="110dp"
             android:layout_height="170dp"
             android:text="추가옵션"
             android:textColor="#6969ff"
-            android:textSize="17dp"/>
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"/>
         <Button
             android:id="@+id/btn_bookmark"
-            android:layout_width="55dp"
-            android:layout_height="57dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             android:background="@drawable/like"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:text="찜"
+            android:textSize="15dp"/>
+
 
     </LinearLayout>
 
