@@ -48,14 +48,11 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:rowCount="4">
+
                 <ImageView
                     android:id="@+id/mainitem_img"
                     android:layout_width="wrap_content"
@@ -93,10 +90,10 @@
                     android:text="찌르면 다죽인다."
                     android:textColor="#6969ff"
                     android:textSize="18dp" />
-            </GridLayout>
 
 
         </LinearLayout>
+
 
     </ScrollView>
 
