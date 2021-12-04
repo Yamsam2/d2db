@@ -29,6 +29,7 @@ public class MainPage_Act extends AppCompatActivity {
             EditText searchbar = (EditText) findViewById(R.id.searchbar);
             Button btnSearch = (Button) findViewById(R.id.btnSearch);
             Button btnHome = (Button) findViewById(R.id.btnSearchHome);
+            Button btnbookmark_list = (Button) findViewById(R.id.btn_bookmark_list);
 
             mPlayer = MediaPlayer.create(this,R.raw.dia2);
             Switch bgm = (Switch) findViewById(R.id.bgm);
@@ -79,6 +80,14 @@ public class MainPage_Act extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), com.example.d2db.ItemPage.class);
+                    startActivity(intent);
+                }
+            });
+            //즐겨찾기 눌렀을때
+            btnbookmark_list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), com.example.d2db.BookmarkPage.class);
                     startActivity(intent);
                 }
             });

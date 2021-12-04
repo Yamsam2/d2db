@@ -16,7 +16,7 @@
             android:id="@+id/text_item_name"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="db 템이름(자바)"
+            android:text="db 탬이름(자바)"
             android:textSize="30dp"
             android:textColor="#bba258"
             android:gravity="center"
@@ -37,9 +37,9 @@
                 android:layout_height="36dp"
                 android:layout_marginLeft="36dp"
                 android:layout_marginRight="5dp"
-                android:background="#e4e4e4"
+                android:background="#33e4e4e4"
                 android:textSize="25dp"
-                android:layout_marginTop="1dp" />
+                android:layout_marginTop="1dp"/>
 
             <Button
                 android:id="@+id/btnSearch"
@@ -63,7 +63,7 @@
                 android:id="@+id/item_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/dager1"
+                android:background="@drawable/dager1"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center"/>
@@ -71,7 +71,7 @@
                 android:id="@+id/item_stat"
                 android:layout_width="170dp"
                 android:layout_height="150dp"
-                android:text="아이템 능력치"
+                android:text="아이탬 능력치"
                 android:textColor="#ffffff"
                 android:textSize="17dp"/>
             <TextView
@@ -114,7 +114,7 @@
                 android:id="@+id/text_item_assess"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="아이템 평가 : 대체로 후짐"
+                android:text="아이탬 평가 : 대체로 후짐"
                 android:textColor="#ffffff"
                 android:gravity="center"
                 android:textSize="17dp">
@@ -123,7 +123,7 @@
                 android:id="@+id/text_item_assess_per"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="%의 사용자가 이 아이템을 좋아합니다"
+                android:text="%의 사용자가 이 아이탬을 좋아합니다"
                 android:textColor="#ffffff"
                 android:gravity="center"
                 android:textSize="17dp">
