@@ -12,34 +12,34 @@
         android:layout_margin="3dp">
 
         <!-- db탬이름 불러오기 -->
-        <TextView
-            android:id="@+id/text_item_name"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="db 탬이름(자바)"
-            android:textSize="30dp"
-            android:textColor="#bba258"
-            android:gravity="center"
-            android:background="#0affffff">
-        </TextView>
+            <TextView
+                android:id="@+id/text_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="db 탬이름(자바)"
+                android:textSize="30dp"
+                android:textColor="#bba258"
+                android:gravity="center"
+                android:background="#0affffff">
+            </TextView>
 
-        <!-- 검색버튼 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
-            android:gravity="top"
-            android:orientation="horizontal"
-            android:background="#0affffff">
-            <EditText
-                android:id="@+id/searchbar"
-                android:layout_width="240dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="36dp"
+            <!-- 검색버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:background="#0affffff">
+                <EditText
+                    android:id="@+id/searchbar"
+                    android:layout_width="240dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="36dp"
                 android:layout_marginRight="5dp"
-                android:background="#e4e4e4"
+                android:background="#33e4e4e4"
                 android:textSize="25dp"
-                android:layout_marginTop="1dp" />
+                android:layout_marginTop="1dp"/>
 
             <Button
                 android:id="@+id/btnSearch"
