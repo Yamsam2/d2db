@@ -67,11 +67,11 @@
             android:orientation="vertical"
             android:layout_margin="5dp">
 
-            <ListView
-                android:id="@+id/item_listview_category"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/item_recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="600dp">
-            </ListView>
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
 
 
         </LinearLayout>

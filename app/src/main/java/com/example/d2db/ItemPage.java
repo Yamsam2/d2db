@@ -4,15 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 public class ItemPage extends AppCompatActivity {
     ListView listView;
-    ListItemAdapter adapter;
+    ItemDTO_Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +37,6 @@ public class ItemPage extends AppCompatActivity {
             }
         });
 
-        //상세보기 아이템 가져오기
-        listView = findViewById(R.id.item_listview_detail);
-        adapter = new ListItemAdapter();
-        adapter.addItem(new ListItem
-                (ContextCompat.getDrawable(this, R.drawable.dager1), "겁내 쌘 대거","음","두방"));
-        listView.setAdapter(adapter);
 
     }
 

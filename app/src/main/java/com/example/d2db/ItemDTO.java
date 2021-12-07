@@ -9,17 +9,19 @@ import java.sql.Blob;
 public class ItemDTO {
     private Long num;
     private String names;
-    private String options;
+    private String option1;
+    private String option2;
     private String recommends;
     private String categorys;
     private Long likes;
     private Long dislikes;
     private Blob images;
 
-    public ItemDTO(Long num, String names, String options, String recommends, String categorys, Long likes, Long dislikes, Blob images) {
+    public ItemDTO(Long num, String names, String option1, String option2, String recommends, String categorys, Long likes, Long dislikes, Blob images) {
         this.num = num;
         this.names = names;
-        this.options = options;
+        this.option1 = option1;
+        this.option2 = option2;
         this.recommends = recommends;
         this.categorys = categorys;
         this.likes = likes;
@@ -43,12 +45,20 @@ public class ItemDTO {
         this.names = names;
     }
 
-    public String getOptions() {
-        return options;
+    public String getOption1() {
+        return option1;
     }
 
-    public void setOptions(String options) {
-        this.options = options;
+    public void setOption1(String option1) {
+        this.option1 = option1;
+    }
+
+    public String getOption2() {
+        return option2;
+    }
+
+    public void setOption2(String option2) {
+        this.option2 = option2;
     }
 
     public String getRecommends() {

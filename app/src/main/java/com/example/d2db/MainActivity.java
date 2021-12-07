@@ -1,21 +1,27 @@
 package com.example.d2db;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Spinner;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
-    ListItemAdapter adapter;
-
-
+    private RecyclerView recyclerView;
+    ItemDTO_Adapter itemdtoAdapter;
+    LinearLayoutManager manager;
     ArrayAdapter<String> adapter_items;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,22 +90,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Item_Service item_service = Retrofit2_Client.getInstance().getItemService();
+        Call<List<ItemDTO>> call = item_service.findAll();
+
+        call.enqueue(new Callback<List<ItemDTO>>() {
+            @Override
+            public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {
+                List<ItemDTO> itemList = response.body();
+                recyclerView = findViewById(R.id.item_recyclerView);
+                manager
+                        = new LinearLayoutManager(MainActivity.this, RecyclerView.VERTICAL, false);
+
+                recyclerView.setLayoutManager(manager);
+
+                itemdtoAdapter = new ItemDTO_Adapter(itemList);
+                recyclerView.setAdapter(itemdtoAdapter);
+                Log.d("data","onResponse: 응답 받은 데이터 :"+itemList);
+                
+            }
+
+            @Override
+            public void onFailure(Call<List<ItemDTO>> call, Throwable t) {
+                Log.d("fail","onResponse: 데이터 불러오기 실패");
+
+            }
+        });
 
 
-        //카테고리 검색 리스트뷰
-        listView = findViewById(R.id.item_listview_category);
-        adapter = new ListItemAdapter();
-        adapter.addItem(new ListItem
-                (ContextCompat.getDrawable(this, R.drawable.dager1),
-                        "디글러 더크\n"+"(The Diggler Dirk)",
-                        "한손 피해: 4 - 13\n" + "요구 레벨: 11\n" + "필요 민첩: 25\n" + "내구도: 20\n" + "기본 무기 속도: [0]",
-                        "피해 50% 증가\n" + "대상의 방어력 무시\n" + "공격 속도 +30%\n" + "냉기 저항 +25%\n" + "화염 저항 +25%\n" + "민첩 +10"));
-        adapter.addItem(new ListItem
-                (ContextCompat.getDrawable(this, R.drawable.dager2),
-                        "속임수 대거\n" + "(Gull Dagger)",
-                        "한손 피해: 2 - 19\n" + "요구 레벨: 4\n" + "내구도: 16\n" + "기본 무기 속도: [-20]",
-                        "피해 1 - 15 추가\n" + "마법 아이템 발견 확률 100% 증가\n" + "마나 -5"));
-        listView.setAdapter(adapter);
 
 
 

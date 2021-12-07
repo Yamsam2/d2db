@@ -78,29 +78,6 @@
                     android:textSize="23dp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnSearchHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/button_small"
-                android:fontFamily="@font/kodia"
-                android:text="카테고리 보기"
-                android:textColor="#ffffff"
-                android:textSize="25dp" />
-
-            <Button
-                android:id="@+id/btn_bookmark_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/button_small"
-                android:fontFamily="@font/kodia"
-                android:text="즐겨찾기"
-                android:textColor="#ffffff"
-                android:textSize="25dp" />
-
         </LinearLayout>
 
 

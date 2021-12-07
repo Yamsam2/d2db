@@ -19,6 +19,16 @@ public class ListItem {
     private Button btn_bookmark;
 
 
+
+    public ListItem(Drawable item_img, String text_item_name, String item_stat, String item_option){
+        this.item_img = item_img;
+        this.text_item_name = text_item_name;
+        this.item_stat = item_stat;
+        this.item_option = item_option;
+//        this.btn_bookmark = btn_bookmark;
+    }
+
+
     //getter
     public Drawable getItem_img() {
         return item_img;
@@ -62,13 +72,7 @@ public class ListItem {
 //        this.btn_bookmark = btn_bookmark;
 //    }
 
-    ListItem(Drawable item_img, String text_item_name, String item_stat, String item_option){
-        this.item_img = item_img;
-        this.text_item_name = text_item_name;
-        this.item_stat = item_stat;
-        this.item_option = item_option;
-//        this.btn_bookmark = btn_bookmark;
-    }
+
 
 }
 

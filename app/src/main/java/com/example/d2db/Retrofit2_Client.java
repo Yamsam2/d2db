@@ -22,7 +22,7 @@ public class Retrofit2_Client {
         }
         return instance;
     }
-    public Item_Service getPhoneService(){
+    public Item_Service getItemService(){
         return itemService;
     }
 }

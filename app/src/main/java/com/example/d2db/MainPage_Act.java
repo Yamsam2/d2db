@@ -73,27 +73,11 @@ public class MainPage_Act extends AppCompatActivity {
                 }
             });
 
-            //카테고리보기 눌렀을때
-            btnHome.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), com.example.d2db.MainActivity.class);
-                    startActivity(intent);
-                }
-            });
             //검색 눌렀을때
             btnSearch.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), com.example.d2db.ItemPage.class);
-                    startActivity(intent);
-                }
-            });
-            //즐겨찾기 눌렀을때
-            btnbookmark_list.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), com.example.d2db.BookmarkPage.class);
                     startActivity(intent);
                 }
             });
