@@ -52,7 +52,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="2dp"
-                    android:background="#33e4e4e4"
+                    android:background="#e4e4e4"
                     android:textSize="25dp" />
 
                 <Button
