@@ -54,7 +54,7 @@ public class ListItemAdapter extends BaseAdapter {
         TextView text_item_nameTextView = convertView.findViewById(R.id.text_item_name);
         TextView item_statTextView  = convertView.findViewById(R.id.item_stat);
         TextView item_optionTextView = convertView.findViewById(R.id.item_option);
-        Button btn_bookmarkButton = convertView.findViewById(R.id.btn_bookmark);
+//        Button btn_bookmarkButton = convertView.findViewById(R.id.btn_bookmark);
 
         //set
         item_imgDrawable.setImageDrawable(listItem.getItem_img());
@@ -62,12 +62,12 @@ public class ListItemAdapter extends BaseAdapter {
         item_statTextView.setText(listItem.getItem_stat());
         item_optionTextView.setText(listItem.getItem_option());
 
-        btn_bookmarkButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    Toast.makeText(context.getApplicationContext(),"즐겨찾기에 추가 됐습니다.",Toast.LENGTH_SHORT).show();
-            }
-        });
+//        btn_bookmarkButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                    Toast.makeText(context.getApplicationContext(),"즐겨찾기에 추가 됐습니다.",Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         return convertView;
     }
