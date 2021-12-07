@@ -1,6 +1,7 @@
 package com.example.d2db;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,13 +61,13 @@ public class ListItemAdapter extends BaseAdapter {
         text_item_nameTextView.setText(listItem.getText_item_name());
         item_statTextView.setText(listItem.getItem_stat());
         item_optionTextView.setText(listItem.getItem_option());
+
         btn_bookmarkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context.getApplicationContext(),"text",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context.getApplicationContext(),"즐겨찾기에 추가 됐습니다.",Toast.LENGTH_SHORT).show();
             }
         });
-
 
         return convertView;
     }

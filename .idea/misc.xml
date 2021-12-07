@@ -3,26 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/d2db/app/src/main/res/layout/activity_main.xml" value="0.22507122507122507" />
+        <entry key="..\:/Android Projects/d2db/app/src/main/res/layout/bookmark_page.xml" value="0.18055555555555555" />
+        <entry key="..\:/Android Projects/d2db/app/src/main/res/layout/frame_item.xml" value="0.11944444444444445" />
+        <entry key="..\:/Android Projects/d2db/app/src/main/res/layout/item_page.xml" value="0.24436090225563908" />
+        <entry key="..\:/Android Projects/d2db/app/src/main/res/layout/itemlist_layout.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android Projects/d2db/app/src/main/res/layout/mainpage.xml" value="0.21568627450980393" />
+        <entry key="..\:/Android Projects/d2db/app/src/main/res/layout/spinner_style.xml" value="0.11944444444444445" />
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.434375" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/drawable/backline.xml" value="0.3177083333333333" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/drawable/backvideo.xml" value="0.3109375" />
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/drawable/ic_launcher_background.xml" value="0.434375" />
-        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/mainpage.xml" value="0.41822916666666665" />
-        <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/activity_main.xml" value="0.15462962962962962" />
-        <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/spinner_style.xml" value="0.15462962962962962" />
-        <entry key="..\:/Users/wjdtj/AndroidStudioProjects/d2db/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/AndroidStudioProjects/d2db/app/src/main/res/layout/iteam_page.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/AndroidStudioProjects/d2db/app/src/main/res/layout/item_page.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/AndroidStudioProjects/d2db/app/src/main/res/layout/mainpage.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/Android_Project/d2db/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/Android_Project/d2db/app/src/main/res/layout/bookmark_page.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/Android_Project/d2db/app/src/main/res/layout/frame_item.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/Android_Project/d2db/app/src/main/res/layout/item_page.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/Android_Project/d2db/app/src/main/res/layout/mainpage.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/wjdtj/Android_Project/d2db/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15092592592592594" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/activity_main2.xml" value="0.2921875" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/iteam_page.xml" value="0.28854166666666664" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/item_page.xml" value="0.28854166666666664" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/mainpage.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

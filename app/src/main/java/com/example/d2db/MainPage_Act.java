@@ -1,6 +1,7 @@
 package com.example.d2db;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.VideoView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 public class MainPage_Act extends AppCompatActivity {
     private VideoView videov;
@@ -26,7 +28,8 @@ public class MainPage_Act extends AppCompatActivity {
 
             final MediaPlayer mPlayer;
 
-            EditText searchbar = (EditText) findViewById(R.id.searchbar);
+//            EditText searchbar = (EditText) findViewById(R.id.searchbar);
+            SearchView searchbar = (SearchView) findViewById(R.id.searchbar);
             Button btnSearch = (Button) findViewById(R.id.btnSearch);
             Button btnHome = (Button) findViewById(R.id.btnSearchHome);
             Button btnbookmark_list = (Button) findViewById(R.id.btn_bookmark_list);
@@ -47,6 +50,9 @@ public class MainPage_Act extends AppCompatActivity {
                     mp.setLooping(true);
                 }
             });
+
+            //검색창
+
 
 
 

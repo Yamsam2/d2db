@@ -105,7 +105,7 @@
                 android:id="@+id/text_item_assess"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="아이탬 평가 : 대체로 후짐"
+                android:text="아이템 평가 : 대체로 후짐"
                 android:textColor="#ffffff"
                 android:gravity="center"
                 android:textSize="17dp">
