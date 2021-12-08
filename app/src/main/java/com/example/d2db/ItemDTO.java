@@ -15,9 +15,8 @@ public class ItemDTO {
     private String categorys;
     private Long likes;
     private Long dislikes;
-    private Blob images;
 
-    public ItemDTO(Long num, String names, String option1, String option2, String recommends, String categorys, Long likes, Long dislikes, Blob images) {
+    public ItemDTO(Long num, String names, String option1, String option2, String recommends, String categorys, Long likes, Long dislikes) {
         this.num = num;
         this.names = names;
         this.option1 = option1;
@@ -26,7 +25,6 @@ public class ItemDTO {
         this.categorys = categorys;
         this.likes = likes;
         this.dislikes = dislikes;
-        this.images = images;
     }
 
     public Long getNum() {
@@ -91,13 +89,5 @@ public class ItemDTO {
 
     public void setDislikes(Long dislikes) {
         this.dislikes = dislikes;
-    }
-
-    public Blob getImages() {
-        return images;
-    }
-
-    public void setImages(Blob images) {
-        this.images = images;
     }
 }

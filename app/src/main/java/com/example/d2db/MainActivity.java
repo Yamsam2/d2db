@@ -20,7 +20,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    ItemDTO_Adapter itemdtoAdapter;
+    private ItemDTO_Adapter itemdtoAdapter;
     LinearLayoutManager manager;
     ArrayAdapter<String> adapter_items;
     @Override
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 itemdtoAdapter = new ItemDTO_Adapter(itemList);
                 recyclerView.setAdapter(itemdtoAdapter);
                 Log.d("data","onResponse: 응답 받은 데이터 :"+itemList);
-                
+
             }
 
             @Override

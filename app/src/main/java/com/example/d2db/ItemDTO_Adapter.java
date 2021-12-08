@@ -14,8 +14,6 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
     private List<ItemDTO> itemList;
 
     public ItemDTO_Adapter(List<ItemDTO> itemList){this.itemList = itemList;}
-
-
     class MyViewHolder extends RecyclerView.ViewHolder{
 
         private TextView text_item_name;
@@ -42,11 +40,19 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ItemDTO_Adapter.MyViewHolder holder, int position) {
         ItemDTO item  = itemList.get(position);
-        holder.text_item_name.setText(item.getNames());
-        holder.item_stat.setText(item.getOption1());
-        holder.item_option.setText(item.getOption2());
+
+        String Cnames = item.getNames();
+        Cnames = Cnames.replace("/","\n");
+        String Coption1 = item.getOption1();
+        Coption1 = Coption1.replace("/","\n");
+        String Coption2 = item.getOption2();
+        Coption2 = Coption2.replace("/","\n");
+
+        holder.text_item_name.setText(Cnames);
+        holder.item_stat.setText(Coption1);
+        holder.item_option.setText(Coption2);
 
 
 
