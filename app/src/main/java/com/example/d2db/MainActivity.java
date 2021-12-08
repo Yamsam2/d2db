@@ -1,6 +1,7 @@
 package com.example.d2db;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,15 +19,48 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
-    private ItemDTO_Adapter itemdtoAdapter;
+    RecyclerView recyclerView;
+    ItemDTO_Adapter itemdtoAdapter;
+    Item_Service item_service;
     LinearLayoutManager manager;
+
     ArrayAdapter<String> adapter_items;
+    Spinner spn_category;
+    Spinner spn_items;
+    SearchView search;
+    String item;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        recyclerView = findViewById(R.id.item_recyclerView);
+        search = findViewById(R.id.list_SearchView);
+
+        //SearchView의 검색 이벤트
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            //검색버튼을 눌렀을 경우
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                item= query;
+                Search();
+                return true;
+            }
+
+            //텍스트가 바뀔때마다 호출
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return true;
+            }
+        });
+
+
+
+        //레이아웃 설정
+        manager= new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
+        recyclerView.setLayoutManager(manager);
+
 
         final String[] category = {
                 "무기", "방어구", "기타", "룬워드"
@@ -51,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Spinner spn_category = (Spinner) findViewById(R.id.spn_category);
-        Spinner spn_items = (Spinner) findViewById(R.id.spn_items);
+        spn_category = (Spinner) findViewById(R.id.spn_category);
+        spn_items = (Spinner) findViewById(R.id.spn_items);
 
         ArrayAdapter<String> adapter_category;
 
@@ -61,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         spn_category.setAdapter(adapter_category);
 
 
+        //카테고리 분류
         // 앞쪽 스피너를 눌렀을 때 뒤쪽 스피너의 항목이 바뀜
         spn_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -90,39 +125,57 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Item_Service item_service = Retrofit2_Client.getInstance().getItemService();
-        Call<List<ItemDTO>> call = item_service.findAll();
 
-        call.enqueue(new Callback<List<ItemDTO>>() {
+
+        //스피너에서 선택된 아이템에 대한 리스트를 보여준다
+        spn_items.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {
-                List<ItemDTO> itemList = response.body();
-                recyclerView = findViewById(R.id.item_recyclerView);
-                manager
-                        = new LinearLayoutManager(MainActivity.this, RecyclerView.VERTICAL, false);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                /*상세보기 */
+                //db 서버와 연결하고 전체보기 메소드를 불러온다
+                item_service= Retrofit2_Client.getInstance().getItemService();
+                Call<List<ItemDTO>> call1= item_service.find_Category(spn_items.getSelectedItem().toString());
+                call1.enqueue(new Callback<List<ItemDTO>>() {
+                    @Override
+                    public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {
+                        Log.d("data", "응답 받은데이터: "+response.body());
+                        List<ItemDTO> item= response.body();
+                        itemdtoAdapter= new ItemDTO_Adapter(item);
+                        recyclerView.setAdapter(itemdtoAdapter);
+                    }
 
-                recyclerView.setLayoutManager(manager);
+                    @Override
+                    public void onFailure(Call<List<ItemDTO>> call, Throwable t) {
 
-                itemdtoAdapter = new ItemDTO_Adapter(itemList);
-                recyclerView.setAdapter(itemdtoAdapter);
-                Log.d("data","onResponse: 응답 받은 데이터 :"+itemList);
-
+                    }
+                });
             }
 
             @Override
-            public void onFailure(Call<List<ItemDTO>> call, Throwable t) {
-                Log.d("fail","onResponse: 데이터 불러오기 실패");
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
 
-
-
-
-
-
-
-
-
     }
+
+    public void Search(){
+        item_service= Retrofit2_Client.getInstance().getItemService();
+        Call<List<ItemDTO>> call1= item_service.search(item);
+        call1.enqueue(new Callback<List<ItemDTO>>() {
+            @Override
+            public void onResponse(Call<List<ItemDTO>> call, Response<List<ItemDTO>> response) {
+                Log.d("data", "응답 받은데이터: "+response.body());
+                List<ItemDTO> item= response.body();
+                itemdtoAdapter= new ItemDTO_Adapter(item);
+                recyclerView.setAdapter(itemdtoAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<ItemDTO>> call, Throwable t) {
+
+            }
+        });
+    }
+
 }
