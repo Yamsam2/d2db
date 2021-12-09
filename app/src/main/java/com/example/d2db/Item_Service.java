@@ -15,4 +15,7 @@ public interface Item_Service {
 
     @GET("search/{names}") //이름 검색
     Call<List<ItemDTO>> search(@Path("names") String name);
+
+    @GET("/detail/{num}")
+    Call <ItemDTO> detail(@Path("num") Long num);
 }

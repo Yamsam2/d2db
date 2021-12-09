@@ -5,6 +5,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     ItemDTO_Adapter itemdtoAdapter;
     Item_Service item_service;
     LinearLayoutManager manager;
+    public static Context context_main;
+
 
     ArrayAdapter<String> adapter_items;
     Spinner spn_category;
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        context_main = MainActivity.this;
 
         recyclerView = findViewById(R.id.item_recyclerView);
         search = findViewById(R.id.list_SearchView);

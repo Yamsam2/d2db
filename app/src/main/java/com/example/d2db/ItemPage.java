@@ -5,12 +5,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.List;
+
+import retrofit2.Call;
 
 public class ItemPage extends AppCompatActivity {
     ListView listView;
     ItemDTO_Adapter adapter;
+    private int likeCount = 0;
+    private int unlikeCount = 0;
+    private String likeAction = "";
+    private String unlikeAction = "";
+    TextView cntLike;
+    TextView cntUnlike;
+    RadioButton rdolike;
+    RadioButton rdoUnlike;
+    Item_Service item_service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +36,88 @@ public class ItemPage extends AppCompatActivity {
 
         Button btnSearchHome = (Button) findViewById(R.id.btnSearchHome);
         Button btn_bookmark_list = (Button) findViewById(R.id.btn_bookmark_list);
+        rdolike = (RadioButton) findViewById(R.id.rdoLike);
+        rdoUnlike = (RadioButton) findViewById(R.id.rdoHate);
+        RadioGroup checkItem = (RadioGroup) findViewById(R.id.checkItem);
+        cntLike = (TextView) findViewById(R.id.cntLike);
+        cntUnlike = (TextView) findViewById(R.id.cntUnlike);
+
+//        item_service= Retrofit2_Client.getInstance().getItemService();
+//        Call<List<ItemDTO>> call1= item_service.findAll()
+
+
+        //좋아요 버튼
+        rdolike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(likeAction == "" && unlikeAction == ""){
+                    likeCount += 1;
+                    likeAction = "liked";
+                    cntLike.setText(String.valueOf(likeCount));
+                    cntUnlike.setText(String.valueOf(unlikeCount));
+                    Toast.makeText(getApplicationContext(), "좋아요", Toast.LENGTH_SHORT).show();
+
+                }else if(likeAction == "" && unlikeAction == "unliked"){
+                    likeCount += 1;
+                    unlikeCount -= 1;
+                    likeAction = "liked";
+                    unlikeAction = "";
+                    cntLike.setText(String.valueOf(likeCount));
+                    cntUnlike.setText(String.valueOf(unlikeCount));
+                    Toast.makeText(getApplicationContext(), "좋아요", Toast.LENGTH_SHORT).show();
+
+                }else if (likeAction == "liked" && unlikeAction == ""){
+                    likeCount -= 1;
+                    likeAction = "";
+                    cntLike.setText(String.valueOf(likeCount));
+                    cntUnlike.setText(String.valueOf(unlikeCount));
+                    checkItem.clearCheck();
+
+                }
+
+
+
+            }
+        });
+
+        //싫어요 버튼
+        rdoUnlike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(unlikeAction == "" && likeAction ==""){
+                    unlikeCount += 1;
+                    unlikeAction = "unliked";
+                    cntLike.setText(String.valueOf(likeCount));
+                    cntUnlike.setText(String.valueOf(unlikeCount));
+                    Toast.makeText(getApplicationContext(), "싫어요", Toast.LENGTH_SHORT).show();
+
+                }else if(unlikeAction == "" && likeAction == "liked"){
+                    unlikeCount += 1;
+                    likeCount -= 1;
+                    unlikeAction = "unliked";
+                    likeAction = "";
+                    cntLike.setText(String.valueOf(likeCount));
+                    cntUnlike.setText(String.valueOf(unlikeCount));
+                    Toast.makeText(getApplicationContext(), "싫어요", Toast.LENGTH_SHORT).show();
+
+                }else if(unlikeAction == "unliked" && likeAction == ""){
+                    unlikeCount -= 1;
+                    unlikeAction = "";
+                    cntLike.setText(String.valueOf(likeCount));
+                    cntUnlike.setText(String.valueOf(unlikeCount));
+                    checkItem.clearCheck();
+
+                }
+
+
+
+
+
+
+            }
+        });
+
+
 
         //카테고리버튼
         btnSearchHome.setOnClickListener(new View.OnClickListener() {
