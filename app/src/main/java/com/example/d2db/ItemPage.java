@@ -42,8 +42,16 @@ public class ItemPage extends AppCompatActivity {
         cntLike = (TextView) findViewById(R.id.cntLike);
         cntUnlike = (TextView) findViewById(R.id.cntUnlike);
 
+
 //        item_service= Retrofit2_Client.getInstance().getItemService();
 //        Call<List<ItemDTO>> call1= item_service.findAll()
+
+        Intent in_intent= getIntent();
+        //final int position=  in_intent.getIntExtra("position",0);
+        final String name=  in_intent.getStringExtra("name");
+        TextView itemname = findViewById(R.id.detail_item_name);
+        itemname.setText(name);
+
 
 
         //좋아요 버튼

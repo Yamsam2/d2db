@@ -14,7 +14,7 @@
 
         <!-- db탬이름 불러오기 -->
         <TextView
-            android:id="@+id/text_item_name"
+            android:id="@+id/detail_item_name"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:text="db 탬이름(자바)"

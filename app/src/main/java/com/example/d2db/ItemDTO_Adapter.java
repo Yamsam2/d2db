@@ -53,6 +53,7 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
         String Cnames = item.getNames();
         Cnames = Cnames.replace("/","\n");
         Cnames = Cnames.replaceAll("[0-9]","");
+        String detailname = Cnames;
         String Coption1 = item.getOption1();
         Coption1 = Coption1.replace("/","\n");
         String Coption2 = item.getOption2();
@@ -70,12 +71,17 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
 
         Log.d("msg",resName);
 
-        holder.item_img.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View detailView = v.inflate(v.getContext(),R.layout.item_page,null);
-                final TextView txtName = detailView.findViewById(R.id.text_item_name);
-                txtName.setText(item.getNames());
+
+
+                Intent intent = new Intent(v.getContext(), com.example.d2db.ItemPage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("name", detailname);
+                v.getContext().startActivity(intent);
+
+
 
 
             }
