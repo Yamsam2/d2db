@@ -1,17 +1,27 @@
 package com.example.d2db;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
 
@@ -26,6 +36,21 @@ public class MainActivity extends AppCompatActivity {
     LinearLayoutManager manager;
     public static Context context_main;
 
+    private ImageButton btn_drawer;
+    private DrawerLayout drawer;
+    private NavigationView NavView; //네비바
+
+    //뒤로가기 버튼눌렀을때 네비바 열려있으면 네비바 닫기
+    @SuppressLint("WrongConstant")
+    @Override
+    public void onBackPressed() {
+        if(drawer.isDrawerOpen(Gravity.END)){
+            drawer.closeDrawer(Gravity.END);
+        }else{
+            super.onBackPressed();
+        }
+    }
+
 
     ArrayAdapter<String> adapter_items;
     Spinner spn_category;
@@ -36,6 +61,84 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        //네비게이션 드로어(툴바)
+        //네비바 옵션
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);//커스텀사용
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);//타이틀 표시
+//            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
+
+        //드로어 클릭
+//            btn_drawer.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                }
+//            });
+        drawer = findViewById(R.id.drawer_layout);
+        btn_drawer = (ImageButton) findViewById(R.id.btn_drawer);
+
+        //메뉴 드로어 버튼 누르면 오른쪽에서 나오게
+        btn_drawer.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("WrongConstant")
+            @Override
+            public void onClick(View v) {
+
+                if (drawer.isDrawerOpen(Gravity.END)) {
+                    drawer.closeDrawer(Gravity.END);
+                } else {
+                    drawer.openDrawer(Gravity.END);
+                }
+
+            }
+        });
+
+        //네비 메뉴 온클릭 이벤트처리
+        NavView = (NavigationView) findViewById(R.id.nav_view);
+        NavView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("WrongConstant")
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.menu_item1:{
+                        Intent intent = new Intent(getApplicationContext(), com.example.d2db.MainActivity.class);
+                        startActivity(intent);
+
+                        break;
+                    }
+                    case R.id.menu_item2:{
+                        Intent intent = new Intent(getApplicationContext(), com.example.d2db.BookmarkPage.class);
+                        startActivity(intent);
+                        drawer.closeDrawer(Gravity.END);
+                        break;
+                    }
+                    case R.id.btn_blizzard:{
+                        Intent locations = new Intent(Intent.ACTION_VIEW);
+                        locations.setData(Uri.parse("https://diablo2.blizzard.com/ko-kr/"));
+                        startActivity(locations);
+                        drawer.closeDrawer(Gravity.END);
+                        break;
+                    }
+                    case R.id.btn_inven:{
+                        Intent locations = new Intent(Intent.ACTION_VIEW);
+                        locations.setData(Uri.parse("https://diablo2.inven.co.kr/"));
+                        startActivity(locations);
+                        drawer.closeDrawer(Gravity.END);
+                        break;
+                    }
+
+                }
+                return false;
+            }
+        });
+
+
+
+
 
         context_main = MainActivity.this;
 
@@ -89,7 +192,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
 
-
         spn_category = (Spinner) findViewById(R.id.spn_category);
         spn_items = (Spinner) findViewById(R.id.spn_items);
 
@@ -129,8 +231,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
 
         //스피너에서 선택된 아이템에 대한 리스트를 보여준다
         spn_items.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

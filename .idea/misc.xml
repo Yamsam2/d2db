@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/admin/AndroidStudioProjects/d2db (2)/app/src/main/res/layout/activity_main.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/d2db (2)/app/src/main/res/layout/bookmark_page.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/d2db (2)/app/src/main/res/layout/frame_item.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/d2db (2)/app/src/main/res/layout/item_page.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/d2db (2)/app/src/main/res/layout/mainpage.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/d2db (2)/app/src/main/res/layout/spinner_style.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.434375" />
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/drawable/backline.xml" value="0.3177083333333333" />
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/drawable/backvideo.xml" value="0.3109375" />
@@ -14,6 +20,16 @@
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/iteam_page.xml" value="0.28854166666666664" />
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/item_page.xml" value="0.25" />
         <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2db/app/src/main/res/layout/mainpage.xml" value="0.25" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/drawable-v24/ic_menu.xml" value="0.303125" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/drawable/rounded.xml" value="0.3203125" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/layout/activity_main.xml" value="0.30480072463768115" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/layout/bookmark_page.xml" value="0.22" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/layout/frame_item.xml" value="0.30480072463768115" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/layout/item_page.xml" value="0.30480072463768115" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/layout/mainpage.xml" value="0.22" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/layout/navbar_header.xml" value="0.2869791666666667" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/layout/spinner_style.xml" value="0.31197916666666664" />
+        <entry key="..\:/Users/eldkg/AndroidStudioProjects/d2dbs/app/src/main/res/menu/drawer_menu.xml" value="0.2869791666666667" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/drawable-v24/ic_baseline_thumb_down_24.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/drawable-v24/ic_baseline_thumb_up_24.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.20925925925925926" />
@@ -24,10 +40,11 @@
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/drawable/backline.xml" value="0.1" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/drawable/backvideo.xml" value="0.1" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/drawable/rounded.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/bookmark_page.xml" value="0.18" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/frame_item.xml" value="0.23595505617977527" />
-        <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/item_page.xml" value="0.22" />
+        <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/item_page.xml" value="0.21367521367521367" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/mainpage.xml" value="0.16" />
         <entry key="..\:/Users/sdh64/AndroidStudioProjects/d2db/app/src/main/res/layout/spinner_style.xml" value="0.16" />
       </map>

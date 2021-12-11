@@ -15,6 +15,9 @@ public class ItemDTO {
     private String categorys;
     private Long likes;
     private Long dislikes;
+    public ItemDTO(){
+
+    }
 
     public ItemDTO(Long num, String names, String option1, String option2, String recommends, String categorys, Long likes, Long dislikes) {
         this.num = num;
@@ -25,6 +28,8 @@ public class ItemDTO {
         this.categorys = categorys;
         this.likes = likes;
         this.dislikes = dislikes;
+
+
     }
 
     public Long getNum() {

@@ -14,16 +14,21 @@
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
             android:name=".BookmarkPage"
-            android:exported="false" />
+            android:exported="true"
+            android:launchMode="singleTask" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".ItemPage"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".MainPage_Act"
-            android:exported="true" >
+            android:exported="true"
+            android:launchMode="singleTask"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

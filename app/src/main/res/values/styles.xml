@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <style name="Theme.Dark" parent="toolbar">-->
+<!--        <item name="android:statusBarColor" tools:targetApi="21">@color/toolbarBackgroundThemeDark</item> &lt;!&ndash;Status Bar의 배경색&ndash;&gt;-->
+<!--        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item> &lt;!&ndash;Status Bar 아이콘의 색상 true:검은 아이콘, false:흰 아이콘&ndash;&gt;-->
+
+<!--        <item name="toolbarStyle">@style/ToolbarStyle.Dark</item> &lt;!&ndash;Toolbar 스타일&ndash;&gt;-->
+<!--        <item name="actionMenuTextColor">@color/textThemeDark</item> &lt;!&ndash;액션 메뉴의 텍스트 색상&ndash;&gt;-->
+<!--        <item name="colorControlNormal">@color/textThemeDark</item> &lt;!&ndash;홈/뒤로가기 버튼의 색상&ndash;&gt;-->
+<!--    </style>-->
+
+<!--    툴바 스타일-->
+    <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">#111111</item> <!-- 배경색-->
+        <item name="android:textSize">10dp</item> <!--툴바 텍스트 사이즈-->
+
+        <!--        <item name="subtitleTextAppearance">@style/ToolbarSubtitleStyle.Dark</item> &lt;!&ndash; Toolbar의 서브타이틀 텍스트&ndash;&gt;-->
+    </style>
+
+    <!--툴바 타이틀 스타일-->
+<!--    <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="android:style/TextAppearance">-->
+<!--        <item name="android:textSize">18dp</item>-->
+<!--    </style>-->
+
+
+        <!--타이틀 텍스트 사이즈-->
+<!--    <style name="ToolbarTitleText">-->
+<!--        <item name="android:textSize">40dp</item>-->
+<!--    </style>-->
+
+
+
+
+
+<!--    &lt;!&ndash; Toolbar의 타이틀 텍스트&ndash;&gt;-->
+<!--    <style name="ToolbarTitleStyle.Dark" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">-->
+<!--        <item name="android:textColor">@color/textThemeDark</item> &lt;!&ndash; Toolbar의 타이틀 텍스트 색상&ndash;&gt;-->
+<!--        <item name="android:textSize">15dp</item> &lt;!&ndash; Toolbar의 타이틀 텍스트 사이즈&ndash;&gt;-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Toolbar의 서브타이틀 텍스트&ndash;&gt;-->
+<!--    <style name="ToolbarSubtitleStyle.Dark" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">-->
+<!--        <item name="android:textColor">@color/textThemeDark</item> &lt;!&ndash; Toolbar의 서브타이틀 텍스트 색상&ndash;&gt;-->
+<!--        <item name="android:textSize">12dp</item> &lt;!&ndash; Toolbar의 서브타이틀 텍스트 사이즈&ndash;&gt;-->
+<!--    </style>-->
+
+
+
+
+
+
+
+</resources>
