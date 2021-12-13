@@ -26,16 +26,12 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
         private TextView item_option;
         private ImageView item_img;
 
-//        private TextView item_like;
-
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             text_item_name = itemView.findViewById(R.id.text_item_name);
             item_stat = itemView.findViewById(R.id.item_stat);
             item_option = itemView.findViewById(R.id.item_option);
             item_img = itemView.findViewById(R.id.item_img);
-
-//            item_like = itemView.findViewById(R.id.cntLike);
         }
 
     }
@@ -57,20 +53,12 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
         String Cnames = item.getNames();
         Cnames = Cnames.replace("/","\n");
         Cnames = Cnames.replaceAll("[0-9]","");
-
         String Coption1 = item.getOption1();
         Coption1 = Coption1.replace("/","\n");
-
         String Coption2 = item.getOption2();
         Coption2 = Coption2.replace("/","\n");
-
         String Crecommend = item.getRecommends();
         Crecommend = Crecommend.replace("/","\n");
-
-        Long cntLike = item.getLikes();
-        cntLike = cntLike.longValue();
-
-
 
         String detailname = Cnames;
         String detailOption1 = Coption1;
@@ -78,29 +66,21 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
         String detailrecommend = Crecommend;
 
 
-
-
-
-
         // MainActi
         String resName = "@drawable/p" + item.getNum();
         String packName = ((MainActivity)MainActivity.context_main).getPackageName();
         int resID = ((MainActivity)MainActivity.context_main).getResources().getIdentifier(resName,"drawable",packName);
-
+        int position_number = item.getNum().intValue();
+        Long likes = item.getLikes();
+        Long dislikes = item.getDislikes();
 
         holder.text_item_name.setText(Cnames);
         holder.item_stat.setText(Coption1);
         holder.item_option.setText(Coption2);
         holder.item_img.setImageResource(resID);
 
-        Long likes = item.getLikes();
-        Long dislikes = item.getDislikes();
-
-
-
         Log.d("msg",resName);
 
-        Long finalCntLike = cntLike;
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,18 +93,14 @@ public class ItemDTO_Adapter extends RecyclerView.Adapter<ItemDTO_Adapter.MyView
                 intent.putExtra("option2",detailOption2);
                 intent.putExtra("recommend",detailrecommend);
                 intent.putExtra("resID",resID);
-
+                intent.putExtra("position",position_number);
                 intent.putExtra("likes",likes);
                 intent.putExtra("dislikes",dislikes);
-
                 v.getContext().startActivity(intent);
-
-
 
 
             }
         });
-
 
     }
 
